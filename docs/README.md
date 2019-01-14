@@ -8,119 +8,77 @@
 
 This workshop demonstrates the use of the [_iSEE_](http://bioconductor.org/packages/iSEE/) package to create and configure interactive applications for the exploration of various types of genomics data sets.
 
-Along with the topic of your workshop, include how students can expect
-to spend their time. For the description may also include information
-about what type of workshop it is (e.g. instructor-led live demo, lab,
-lecture + lab, etc.). Instructors are strongly recommended to provide
-completely worked examples for lab sessions, and a set of stand-alone
-notes that can be read and understood outside of the workshop.
+This workshop will be presented as a lab session that combines an instructor-led live demo, followed by hands-on experimentation guided by completely worked examples and stand-alone notes that participants may continue to peruse after the workshop.
+
+The instructor-led live demo comprises three parts:
+
+1. Brief lecture of the package concept and functionality
+2. Introduction to the user interface
+3. Instructions to preconfigure iSEE apps
+
+The hands-on lab comprises three part:
+
+1. Inspection of single-cell RNA-seq data at various steps of a typical computational workflow, including quality control and dimensionality reduction
+2. Addition of custom panels to the user interface for advanced visualization.
+3. Additional questions from the participants, including individual use cases and suggestions for future developments
+
+Participants are encouraged to ask questions at any time during the workshop.
 
 ## Pre-requisites
 
 List any workshop prerequisites, for example:
 
-* Basic knowledge of R syntax
-* Familiarity with the `SummarizedExperiment` and `SingleCellExperiment` classes
-* Familiarity with the `shiny` package
-* Familiarity with the `scRNAseq` [vignette](https://bioconductor.org/packages/release/data/experiment/vignettes/scRNAseq/inst/doc/scRNAseq.html)
+* Basic knowledge of R syntax and the use of data-frames
+* Familiarity with the [`SummarizedExperiment`](http://bioconductor.org/packages/SummarizedExperiment) and [`SingleCellExperiment`](http://bioconductor.org/packages/SingleCellExperiment) classes
+* Familiarity with the [`shiny`](https://CRAN.R-project.org/package=shiny) CRAN package
+* Familiarity with the [`scRNAseq`](http://bioconductor.org/packages/scRNAseq/) package and [vignette](https://bioconductor.org/packages/release/data/experiment/vignettes/scRNAseq/inst/doc/scRNAseq.html)
 
-List relevant background reading for the workshop, including any
-theoretical background you expect students to have.
+Additional background reading about the programming environment, relevant packages, and example use cases:
 
 * Shiny from RStudio: https://shiny.rstudio.com
-* List any textbooks, papers, or other reading that students should be
-  familiar with. Include direct links where possible.
+* SummarizedExperiment paper: https://www.nature.com/articles/nmeth.3252 (Figure 2)
+* iSEE paper: https://f1000research.com/articles/7-741/v1
 
 ## Workshop Participation
 
-Student will participate by following along an _R markdown_ document, and asking questions throughout the workshop.
+Students will participate by following along an [_R markdown_](https://rmarkdown.rstudio.com/) document, and asking questions throughout the workshop.
+There is also scope for participants to apply  [_iSEE_](http://bioconductor.org/packages/iSEE/) to their own data sets, and fuel the discussion with more questions about specific use cases.
 
 ## _R_ / _Bioconductor_ packages used
 
 * iSEE
 * SummarizedExperiment
 * SingleCellExperiment
+* scater
+* scran
 
 ## Time outline
 
-For a 1-hour workshop.
-
-| Activity                          | Time |
-|-----------------------------------|------|
-| Overview of package and concepts  | 10m  |
-| The app user interface            | 20m  |
-| Configuring the app interface     | 20m  |
-| Additional questions              | 10m  |
+| Activity                                      | Time |
+|-----------------------------------------------|------|
+| **Lecture**: Overview of package and concepts | 20m  |
+| **Live demo**: the user interface             | 20m  |
+| **Lab**: Configuring the app interface        | 20m  |
+| **Lab**: A single-cell RNA-seq workflow       | 20m  |
+| **Lab**: Custom panels                        | 20m  |
+| Additional questions                          | 20m  |
 
 # Workshop goals and objectives
 
-List "big picture" student-centered workshop goals and learning
-objectives. Learning goals and objectives are related, but not the
-same thing. These goals and objectives will help some people to decide
-whether to attend the conference for training purposes, so please make
-these as precise and accurate as possible.
-
-*Learning goals* are high-level descriptions of what
-participants will learn and be able to do after the workshop is
-over. *Learning objectives*, on the other hand, describe in very
-specific and measurable terms specific skills or knowledge
-attained. The [Bloom's Taxonomy](#bloom) may be a useful framework
-for defining and describing your goals and objectives, although there
-are others.
-
 ## Learning goals
 
-Some examples:
-
-* describe how to...
-* identify methods for...
-* understand the difference between...
+* Recognize the benefits of integrative data containers such as `SummarizedExperiment` and `SingleCellExperiment` for downstream analyses and visualization
+* Understand the difference between [RStudio Shiny](https://shiny.rstudio.com) and [_iSEE_](http://bioconductor.org/packages/iSEE/) apps
+* Identify biological data that may be combined into insightful graphical outputs
+* Utilize interactive UI components and layouts to efficiently extract information from biological data sets
+* Describe how to construct interactive apps and custom panels
 
 ## Learning objectives
 
-* analyze xyz data to produce...
-* create xyz plots
-* evaluate xyz data for artifacts
-
-### A note about learning goals and objectives (#bloom)
-
-While not a new or modern system for thinking about learning,
-[Bloom's taxonomy][1] is one useful framework for understanding the
-cognitive processes involved in learning. From lowest to highest
-cognitive requirements:
-
-1. Knowledge: Learners must be able to recall or remember the
-   information.
-2. Comprehension: Learners must be able to understand the information.
-3. Application: Learners must be able to use the information they have
-   learned at the same or different contexts.
-4. Analysis: Learners must be able to analyze the information, by
-   identifying its different components.
-5. Synthesis: Learners must be able to create something new using
-   different chunks of the information they have already mastered.
-6. Evaluation: Learners must be able to present opinions, justify
-   decisions, and make judgments about the information presented,
-   based on previously acquired knowledge.
-
-To use Bloom's taxonomy, consider the following sets of verbs and
-descriptions for learning objectives:
-
-1. Remember: Memorize, show, pick, spell, list, quote, recall, repeat,
-   catalogue, cite, state, relate, record, name.
-2. Understand: Explain, restate, alter, outline, discuss, expand,
-   identify, locate, report, express, recognize, discuss, qualify,
-   covert, review, infer.
-3. Apply: Translate, interpret, explain, practice, illustrate,
-   operate, demonstrate, dramatize, sketch, put into action, complete,
-   model, utilize, experiment, schedule, use.
-4. Analyze: Distinguish, differentiate, separate, take apart,
-   appraise, calculate, criticize, compare, contrast, examine, test,
-   relate, search, classify, experiment.
-5. Evaluate: Decide, appraise, revise, score, recommend, select,
-   measure, argue, value, estimate, choose, discuss, rate, assess,
-   think.
-6. Create: Compose, plan, propose, produce, predict, design, assemble,
-   prepare, formulate, organize, manage, construct, generate, imagine,
-   set-up.
-
-[1]: https://cft.vanderbilt.edu/guides-sub-pages/blooms-taxonomy/ "Bloom's Taxonomy"
+* Memorize the key information available in `SummarizedExperiment` and `SingleCellExperiment` objects
+* Set up a local environment for running iSEE apps
+* Interact with components of the iSEE user interface to visually inspect and discuss various data sets
+* Identify and locate configurable aspects of iSEE apps
+* Practice interactive visualization along a single-cell RNA-sequencing workflow
+* Design custom iSEE panels for advanced use cases
+* Imagine use cases and future developments for interactive visualization as part of computational workflows
